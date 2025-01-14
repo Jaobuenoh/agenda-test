@@ -1,0 +1,44 @@
+{
+  "extends": ["airbnb-base", "airbnb-typescript/base", "plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint", "import", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 1
+      }
+    ],
+    "semi": ["error", "always"],
+    "linebreak-style": ["error", "windows"],
+    "import/prefer-default-export": "off",
+    "no-console": ["error", { "allow": ["error"] }],
+    "consistent-return": "error",
+    "no-useless-constructor": "off",
+    "no-empty-function": [
+      "error",
+      {
+        "allow": ["constructors"]
+      }
+    ],
+    "@typescript-eslint/no-empty-function": [
+      "error",
+      {
+        "allow": ["constructors"]
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-useless-constructor": "error"
+  }
+}
